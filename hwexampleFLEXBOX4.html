@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!--Christian Zambrano-->
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Complex flexbox example</title>
+    <style>
+      html {
+        font-family: sans-serif;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      header {
+        background: blueviolet;
+        height: 100px;
+      }
+
+      h1 {
+        text-align: center;
+        color: white;
+        line-height: 100px;
+        margin: 0;
+      }
+
+      article {
+        padding: 10px;
+        margin: 10px;
+        background: blue;
+      }
+
+      /* Add your flexbox CSS below here */
+
+      section {
+        display: flex;
+      }
+
+      article {
+        flex: 1 200px;
+      }
+
+      article:nth-of-type(3) {
+        flex: 3 200px;
+        display: flex;
+        flex-flow: column;
+      }
+
+      article:nth-of-type(3) div:first-child {
+        flex: 1 100px;
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: space-around;
+      }
+
+      button {
+        flex: 1 auto;
+        margin: 5px;
+        font-size: 18px;
+        line-height: 1.5;
+      }
+    
+      button:nth-child(1) {
+        background-color: white;
+      }
+      
+      button:nth-child(2) {
+        background-color: black;
+        color: white;
+      }
+      
+      button:nth-child(3) {
+        background-color: red;
+      }
+      
+      button:nth-child(4) {
+        background-color: yellow;
+      }
+      
+      button:nth-child(5) {
+        background-color: green;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Drive Safe</h1>
+    </header>
+
+    <section>
+      <article>
+        <h2>First article</h2>
+
+        <p>Driving is an essential skill that allows individuals to travel from one place to another using vehicles.</p>
+      </article>
+
+      <article>
+        <h2>Second article</h2>
+
+        <p>Driver safety is a critical aspect of responsible driving, involving adherence to traffic laws and defensive driving techniques.</p>
+      </article>
+
+      <article>
+        <div>
+            <button>Turn on</button>
+            <button>Turn off</button>
+            <button>Red</button>
+            <button>Yellow</button>
+            <button>Green</button>
+        </div>
+        <div>
+          <p>Driving responsibly includes obeying traffic signals, yielding the right-of-way, and following speed limits.</p>
+        </div>
+        <div>
+          <p>It's important to avoid distractions while driving, such as texting or using a mobile phone, to prevent accidents.</p>
+        </div>
+      </article>
+    </section>
+  </body>
+</html>
